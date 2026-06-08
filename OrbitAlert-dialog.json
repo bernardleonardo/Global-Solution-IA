@@ -1,0 +1,786 @@
+{
+  "intents": [
+    {
+      "intent": "como_funciona",
+      "examples": [
+        {
+          "text": "como é feita a análise de risco"
+        },
+        {
+          "text": "como funciona a detecção de desastres"
+        },
+        {
+          "text": "como funciona o OrbitAlert"
+        },
+        {
+          "text": "como o alerta chega até mim"
+        },
+        {
+          "text": "como vocês detectam os riscos"
+        },
+        {
+          "text": "de onde vêm os dados do sistema"
+        },
+        {
+          "text": "de que forma os dados são coletados"
+        },
+        {
+          "text": "explica o fluxo do sistema"
+        },
+        {
+          "text": "o que é o OrbitAlert"
+        },
+        {
+          "text": "o sistema usa satélites de verdade"
+        },
+        {
+          "text": "quais satélites vocês usam"
+        },
+        {
+          "text": "qual a tecnologia por trás do sistema"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "consultar_regiao",
+      "examples": [
+        {
+          "text": "alertas ativos no Tocantins"
+        },
+        {
+          "text": "como está a situação em São Paulo"
+        },
+        {
+          "text": "me mostra o risco do Amazonas"
+        },
+        {
+          "text": "nível de ameaça em Rondônia"
+        },
+        {
+          "text": "qual o nível de risco do Pantanal"
+        },
+        {
+          "text": "qual o risco em Minas Gerais"
+        },
+        {
+          "text": "quero saber sobre o Rio de Janeiro"
+        },
+        {
+          "text": "risco atual no Pará"
+        },
+        {
+          "text": "situação atual do Mato Grosso"
+        },
+        {
+          "text": "status de Goiás"
+        },
+        {
+          "text": "tem algum alerta no Nordeste"
+        },
+        {
+          "text": "ver dados da Bahia"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "emergencia_ativa",
+      "examples": [
+        {
+          "text": "acho que tem risco de deslizamento aqui"
+        },
+        {
+          "text": "a chuva está muito forte aqui"
+        },
+        {
+          "text": "a situação aqui está crítica"
+        },
+        {
+          "text": "emergência ambiental na minha região"
+        },
+        {
+          "text": "estou vendo fumaça na região"
+        },
+        {
+          "text": "o rio está transbordando"
+        },
+        {
+          "text": "preciso de ajuda urgente"
+        },
+        {
+          "text": "preciso reportar um incêndio"
+        },
+        {
+          "text": "reportar emergência"
+        },
+        {
+          "text": "tem enchente na minha cidade"
+        },
+        {
+          "text": "tem uma queimada aqui perto"
+        },
+        {
+          "text": "vi sinais de queimada"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "receber_alerta",
+      "examples": [
+        {
+          "text": "ativa alertas para o Pantanal"
+        },
+        {
+          "text": "ativa monitoramento para Goiás"
+        },
+        {
+          "text": "avisa se tiver emergência no Pará"
+        },
+        {
+          "text": "cadastra alerta para minha região"
+        },
+        {
+          "text": "cadastra minha região para alertas"
+        },
+        {
+          "text": "me avisa quando tiver risco em Minas"
+        },
+        {
+          "text": "me inscreve no monitoramento do Nordeste"
+        },
+        {
+          "text": "me notifica quando o risco subir"
+        },
+        {
+          "text": "quero acompanhar alertas do Rio"
+        },
+        {
+          "text": "quero notificações de inundação"
+        },
+        {
+          "text": "quero receber alertas de São Paulo"
+        },
+        {
+          "text": "quero ser notificado sobre queimadas"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "tipos_desastre",
+      "examples": [
+        {
+          "text": "como a seca é medida"
+        },
+        {
+          "text": "como funciona o alerta de enchente"
+        },
+        {
+          "text": "como funciona o monitoramento de inundação"
+        },
+        {
+          "text": "como identificam queimadas pelo satélite"
+        },
+        {
+          "text": "me explica sobre seca"
+        },
+        {
+          "text": "o que causa deslizamento de terra"
+        },
+        {
+          "text": "o que é uma queimada"
+        },
+        {
+          "text": "o sistema detecta ciclones"
+        },
+        {
+          "text": "quais desastres são mais comuns no Brasil"
+        },
+        {
+          "text": "quais tipos de desastre vocês monitoram"
+        },
+        {
+          "text": "quero saber sobre risco de enchente"
+        },
+        {
+          "text": "vocês monitoram tempestades"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "nivel_risco",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "atencao",
+          "synonyms": [
+            "amarelo",
+            " moderado",
+            "precaução",
+            "risco médio"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "critico",
+          "synonyms": [
+            " alto risco",
+            "emergência",
+            "perigo",
+            "risco elevado",
+            "vermelho"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "seguro",
+          "synonyms": [
+            "baixo risco",
+            "risco mínimo",
+            "sem risco",
+            "verde"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "orgao_emergencia",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bombeiros",
+          "synonyms": [
+            "193",
+            " bombeiros militares",
+            "corpo de bombeiros"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Defesa Civil",
+          "synonyms": [
+            " COMDEC",
+            "coordenadoria",
+            "proteção civil"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "IBAMA",
+          "synonyms": [
+            " fiscalização ambiental",
+            "polícia ambiental"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "SAMU",
+          "synonyms": [
+            "192",
+            "ambulância",
+            "emergência médica"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "regiao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Amazonia",
+          "synonyms": [
+            "AM",
+            " Amazonas",
+            "PA",
+            "Pará",
+            "Ro",
+            " Rondônia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cerrado",
+          "synonyms": [
+            "GO",
+            "Goiás",
+            "Mato Grosso",
+            "MT",
+            "TO",
+            "Tocantins"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nordeste",
+          "synonyms": [
+            "BA",
+            "Bahia",
+            " CE",
+            "Ceará",
+            " PE",
+            "Pernambuco"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pantanal",
+          "synonyms": [
+            "pantanal mato-grossense",
+            "região pantaneira"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sudeste",
+          "synonyms": [
+            "MG",
+            "Minas Gerais",
+            " Rio de Janeiro",
+            "RJ",
+            "São Paulo",
+            " SP"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sul",
+          "synonyms": [
+            " Paraná",
+            "PR",
+            "Rio Grande do Sul",
+            "RS",
+            "Santa Catarina",
+            "SC"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "satelite",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ESA",
+          "synonyms": [
+            "agência europeia",
+            "Copernicus",
+            "Sentinel"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "INPE",
+          "synonyms": [
+            " instituto nacional de pesquisas espaciais",
+            "satélite brasileiro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "NASA",
+          "synonyms": [
+            "agência americana",
+            " FIRMS",
+            "Landsat",
+            "MODIS"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Space Charter",
+          "synonyms": [
+            "carta espacial",
+            " International Charter"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tipo_desastre",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "deslizamento",
+          "synonyms": [
+            "desmoronamento",
+            "erosão",
+            "escorregamento",
+            "queda de barreira"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "inundacao",
+          "synonyms": [
+            "alagamento",
+            "cheia",
+            "enchente",
+            " rio transbordando"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "queimada",
+          "synonyms": [
+            "focos de calor",
+            "fogo",
+            "incêndio",
+            "incêndio florestal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "seca",
+          "synonyms": [
+            "déficit hídrico",
+            "estiagem",
+            " falta de chuva",
+            "período seco"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tempestade",
+          "synonyms": [
+            "chuva forte",
+            "granizo",
+            "temporal",
+            "vendaval"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🛰️ Olá! Sou o OrbitBot, assistente da plataforma OrbitAlert! Monitoro desastres naturais via satélite. Posso te ajudar a consultar riscos por região, receber alertas, ou reportar emergências. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🤔 Não entendi. Posso te ajudar com: consultar risco de uma região, receber alertas, tipos de desastre, como funciona o sistema ou reportar emergência. Tente de outra forma!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_4_1780524120928",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para qual região você quer receber alertas?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1780523664239",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1780523664239",
+      "previous_sibling": "handler_2_1780523664239"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual tipo de evento você está observando?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_3_1780524136327",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1780524136328",
+      "previous_sibling": "handler_4_1780524136328"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🛰️ Verificando dados de satélite! Qual região ou estado você quer consultar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1780522619792",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1780522869737"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1780523931941",
+      "event_name": "input",
+      "dialog_node": "handler_1_1780523931942"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_10_1780523109016",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1780523663758"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1780523664239",
+      "context": {
+        "regiao": "@regiao"
+      },
+      "conditions": "@regiao",
+      "event_name": "input",
+      "dialog_node": "handler_2_1780523664239"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual região você quer consultar?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_6_1780522870258",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1780522870260",
+      "previous_sibling": "handler_8_1780522870260"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_7_1780523925081",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1780523931013"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_4_1780524120928",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1780524135791"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1780524136327",
+      "context": {
+        "tipo_desastre": "@tipo_desastre"
+      },
+      "conditions": "@tipo_desastre",
+      "event_name": "input",
+      "dialog_node": "handler_4_1780524136328"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1780523931941",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1780523931942",
+      "previous_sibling": "handler_1_1780523931942"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1780522870258",
+      "context": {
+        "regiao": "@regiao"
+      },
+      "conditions": "@regiao",
+      "event_name": "input",
+      "dialog_node": "handler_8_1780522870260"
+    },
+    {
+      "type": "frame",
+      "title": "Receber Alerta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "✅ Pronto! Você foi cadastrado para receber alertas de $regiao via Telegram e Webchat. Posso ajudar com mais alguma coisa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#receber_alerta",
+      "dialog_node": "node_10_1780523109016",
+      "previous_sibling": "node_4_1780522619792"
+    },
+    {
+      "type": "frame",
+      "title": "Consultar Região",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🛰️ Dados de satélite para $regiao: Nível de Risco: Atenção (47/100) — Ameaça Principal: Queimada — Umidade: 34% — Temperatura: 38°C. Deseja receber alertas desta região?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#consultar_regiao",
+      "dialog_node": "node_4_1780522619792",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "frame",
+      "title": "Emergencia Ativa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🚨 Ocorrência de $tipo_desastre registrada em $regiao! Ligue agora: Bombeiros 193, Defesa Civil 199, SAMU 192."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#emergencia_ativa",
+      "dialog_node": "node_4_1780524120928",
+      "previous_sibling": "node_5_1780524070705"
+    },
+    {
+      "type": "standard",
+      "title": "Como Funciona",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "⚙️ O OrbitAlert funciona assim: 1) Satélites da NASA, ESA e INPE capturam dados a cada 2 horas. 2) Nossos algoritmos analisam temperatura, umidade e vegetação. 3) O sistema calcula o risco de 0 a 100. 4) Se crítico, você recebe alerta via Telegram e Webchat!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#como_funciona",
+      "dialog_node": "node_5_1780524070705",
+      "previous_sibling": "node_7_1780523925081"
+    },
+    {
+      "type": "standard",
+      "title": "Tipos de Desastre",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🌍 O OrbitAlert monitora 5 tipos de desastres: 🔥 Queimada, 🌊 Inundação, ☀️ Seca, ⛰️ Deslizamento e ⛈️ Tempestade"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#tipos_desastre",
+      "dialog_node": "node_7_1780523925081",
+      "previous_sibling": "node_10_1780523109016"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1780524120928",
+      "variable": "$tipo_desastre",
+      "dialog_node": "slot_3_1780524136327",
+      "previous_sibling": "handler_4_1780524135791"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1780523109016",
+      "variable": "$regiao",
+      "dialog_node": "slot_4_1780523664239",
+      "previous_sibling": "handler_2_1780523663758"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1780523925081",
+      "dialog_node": "slot_4_1780523931941",
+      "previous_sibling": "handler_3_1780523931013"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1780522619792",
+      "variable": "$regiao",
+      "dialog_node": "slot_6_1780522870258",
+      "previous_sibling": "handler_1_1780522869737"
+    }
+  ],
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "created for assistant 352cda11-4a2c-4183-833d-087981b2ac53",
+  "name": "OrbitAlert-dialog"
+}
